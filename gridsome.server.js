@@ -4,13 +4,34 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const axios = require('axios')
+
 
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(async actions => {
+    const { data } = await axios.get('https://rickandmortyapi.com/api/character')
+
+    const collection = actions.addCollection({
+      typeName: 'Characters'
+    })
+    
+
+    for (const item of data["results"]) {
+      collection.addNode({
+        id: item.id,
+        name: item.name,
+        status: item.status,
+        species: item.species,
+        gender: item.gender,
+        image: item.image
+      })
+    }
+    
   })
+
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
 }
+
