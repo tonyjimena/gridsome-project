@@ -1,16 +1,6 @@
 <template>
   <div class="layout">
-    <!-- <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header> -->
     <Navbar></Navbar>
-    <!-- <slot/> -->
     <main>
       <transition name="fade" mode="out-in">
         <slot/>
@@ -21,7 +11,6 @@
 </template>
 
 <script>
-//import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import Navbar from '../components/Navbar.vue'
 import FooterComponent from '../components/Footer.vue'
 export default {
@@ -56,7 +45,6 @@ main {
   text-align: center;
   margin-top: 100px;
 }
-
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;

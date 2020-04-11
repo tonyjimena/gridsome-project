@@ -14,9 +14,6 @@
           <b-nav-item>
             <g-link to="/primer" class="nav-link">Go to primer</g-link>
           </b-nav-item>
-          <!-- <b-nav-item>
-            <g-link to="/form" class="nav-link">Go to form</g-link>
-          </b-nav-item> -->
           <b-nav-item>
             <g-link to="/cards" class="nav-link">Rick And Morty</g-link>
           </b-nav-item>
