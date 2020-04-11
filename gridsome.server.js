@@ -32,6 +32,18 @@ module.exports = function (api) {
 
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
+      createPage({
+        path: '/primer/',
+        component: './src/components/Primer.vue'
+      })
+      createPage({
+        path: '/cards/',
+        component: './src/components/Cards.vue'
+      })
+      createPage({
+        path: '/primer/',
+        component: './src/components/Primer.vue'
+      })
+    })
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <header class="header">
+    <!-- <header class="header">
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
@@ -8,11 +8,30 @@
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about/">About</g-link>
       </nav>
-    </header>
-    <slot/>
+    </header> -->
+    <Navbar></Navbar>
+    <!-- <slot/> -->
+    <main>
+      <transition name="fade" mode="out-in">
+        <slot/>
+      </transition>
+    </main>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
+<script>
+//import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import Navbar from '../components/Navbar.vue'
+import FooterComponent from '../components/Footer.vue'
+export default {
+  name: 'Default',
+  components: {
+    Navbar,
+    FooterComponent
+  }
+}
+</script>
 <static-query>
 query {
   metadata {
@@ -23,30 +42,26 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+  margin: 0;
 }
 
 .layout {
-  /*max-width: 760px;*/
-  margin: 0 auto;
-  /* padding-left: 20px;
-  padding-right: 20px; */
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-  background-color: cadetblue;
-
+main {
+  text-align: center;
+  margin-top: 100px;
 }
 
-.nav__link {
-  margin-left: 20px;
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
