@@ -2,9 +2,9 @@
   <div class="layout">
     <Navbar></Navbar>
     <main>
-      <transition name="fade" mode="out-in">
+      <transition-group name="fade" mode="out-in" appear>
         <slot/>
-      </transition>
+      </transition-group>
     </main>
     <FooterComponent></FooterComponent>
   </div>
