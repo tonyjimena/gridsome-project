@@ -40,10 +40,7 @@ module.exports = function (api) {
         path: '/cards/',
         component: './src/components/Cards.vue'
       })
-      createPage({
-        path: '/primer/',
-        component: './src/components/Primer.vue'
-      })
+      
     })
 }
 

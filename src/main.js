@@ -15,18 +15,3 @@ export default function (Vue, { router, head, isClient }) {
   //Vue.use(routerP)
   Vue.component('Layout', DefaultLayout)
 }
-
-// // Install BootstrapVue
-// Vue.use(BootstrapVue)
-// // Optionally install the BootstrapVue icon components plugin
-// Vue.use(IconsPlugin)
-
-// Vue.config.productionTip = false
-
-// /* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   router,
-//   template: '<App/>',
-//   components: { App }
-// })
