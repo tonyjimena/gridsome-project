@@ -1,12 +1,12 @@
 <template>
   <div class="layout">
-    <Navbar></Navbar>
+    <Navbar/>
     <main>
       <transition-group name="fade" mode="out-in" appear>
         <slot/>
       </transition-group>
     </main>
-    <FooterComponent></FooterComponent>
+    <FooterComponent/>
   </div>
 </template>
 
