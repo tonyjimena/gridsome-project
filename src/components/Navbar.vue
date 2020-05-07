@@ -5,9 +5,7 @@
         <img id="logo" src="../assets/logo.png" alt="Vue.js PWA" />
       </g-link>
     </b-navbar-brand>
-
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item>
@@ -17,7 +15,6 @@
           <g-link to="/cards" class="nav-link">Rick And Morty</g-link>
         </b-nav-item>
       </b-navbar-nav>
-
       <b-navbar-nav class="ml-auto">
         <b-nav-form>
           <b-form-input
@@ -31,7 +28,6 @@
             >Search</b-button
           >
         </b-nav-form>
-
         <b-nav-item-dropdown right>
           <template v-slot:button-content>
             <em>User</em>
